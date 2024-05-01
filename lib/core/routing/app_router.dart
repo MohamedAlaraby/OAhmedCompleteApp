@@ -3,6 +3,8 @@ import 'package:flutter_complete_project/Features/Onboarding/onboarding_screen.d
 import 'package:flutter_complete_project/core/routing/routes.dart';
 
 class AppRouter {
+
+  
   Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.onBoardingScreen:
