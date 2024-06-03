@@ -13,7 +13,8 @@ class MyTextFormField extends StatelessWidget {
   final bool? isObscuredText;
   final Widget? suffixIcon;
   final Color? backgroundgColor;
-
+  final TextEditingController? controller;
+  final Function(String?) validator;
   const MyTextFormField({
     super.key,
     required this.hintText,
@@ -25,11 +26,14 @@ class MyTextFormField extends StatelessWidget {
     this.isObscuredText,
     this.suffixIcon,
     this.backgroundgColor,
+    required this.validator,
+    this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         isDense: true, //to control the padding.
         contentPadding: contentPadding ??
@@ -50,14 +54,31 @@ class MyTextFormField extends StatelessWidget {
                 width: 1.3,
               ),
             ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+        ),
         hintStyle: hintTextStyle ?? TextStyles.font14lightGreyNormal,
         hintText: hintText,
         fillColor: backgroundgColor ?? ColorsManager.offWhite,
         filled: true,
         suffixIcon: suffixIcon,
       ),
-      style: TextStyles.font14DarkBlueMeduim,
+      style: TextStyles.font14DarkBlueReguler,
       obscureText: isObscuredText ?? false, //email not pass if false.
+      validator: (String? value) {
+        return validator(value);
+      },
     );
   }
 }

@@ -29,7 +29,7 @@ class TextStyles {
     fontWeight: FontWeightHelper.reguler,
     color: ColorsManager.lightGrey,
   );
-  static TextStyle font14DarkBlueMeduim = TextStyle(
+  static TextStyle font14DarkBlueReguler = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.meduim,
     color: ColorsManager.darkBlue,

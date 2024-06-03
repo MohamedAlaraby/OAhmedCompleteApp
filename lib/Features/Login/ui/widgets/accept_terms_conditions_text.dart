@@ -15,17 +15,17 @@ class AcceptTermsAndConditions extends StatelessWidget {
         ),
         TextSpan(
           text: 'Terms & conditions',
-          style: TextStyles.font14DarkBlueMeduim,
+          style: TextStyles.font14DarkBlueReguler,
         ),
         TextSpan(
           text: ' and',
-          style: TextStyles.font14DarkBlueMeduim.copyWith(
+          style: TextStyles.font14DarkBlueReguler.copyWith(
             height: 1.5,
           ),
         ),
         TextSpan(
           text: ' privacy policy',
-          style: TextStyles.font14DarkBlueMeduim,
+          style: TextStyles.font14DarkBlueReguler,
         ),
       ]),
     );
