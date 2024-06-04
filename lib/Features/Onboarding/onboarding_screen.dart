@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_project/Features/Onboarding/widgets/app_logo_and_text.dart';
-import 'package:flutter_complete_project/Features/Onboarding/widgets/doctor_image.dart';
-import 'package:flutter_complete_project/Features/Onboarding/widgets/get_started_button.dart';
+import 'package:flutter_complete_project/Features/onboarding/widgets/app_logo_and_text.dart';
+import 'package:flutter_complete_project/Features/onboarding/widgets/doctor_image.dart';
+import 'package:flutter_complete_project/Features/onboarding/widgets/get_started_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingScreen extends StatefulWidget {
