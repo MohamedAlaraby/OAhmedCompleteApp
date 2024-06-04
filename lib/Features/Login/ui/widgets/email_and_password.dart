@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_complete_project/Features/Login/logic/cubit/login_cubit.dart';
-import 'package:flutter_complete_project/Features/Login/ui/widgets/password_validation.dart';
+import 'package:flutter_complete_project/Features/login/ui/widgets/password_validation.dart';
+import 'package:flutter_complete_project/Features/login/logic/login_cubit/login_cubit.dart';
 import 'package:flutter_complete_project/core/helpers/app_regex.dart';
 import 'package:flutter_complete_project/core/helpers/spacing_helper.dart';
 import 'package:flutter_complete_project/core/widgets/my_text_form_field.dart';
@@ -26,6 +26,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
     passwordController = context.read<LoginCubit>().passwordController;
     setupPasswordControllerListener();
   }
+
   void setupPasswordControllerListener() {
     passwordController.addListener(() {
       setState(() {
@@ -64,7 +65,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           ),
           verticalSpace(10),
           MyTextFormField(
-            isObscuredText: isObsecuredText,
+            isObscureText: isObsecuredText,
             hintText: "Password",
             suffixIcon: IconButton(
               onPressed: () {

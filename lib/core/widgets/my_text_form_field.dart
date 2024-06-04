@@ -10,7 +10,7 @@ class MyTextFormField extends StatelessWidget {
   final TextStyle? inputTextStyle;
   final TextStyle? hintTextStyle;
   final String hintText;
-  final bool? isObscuredText;
+  final bool? isObscureText;
   final Widget? suffixIcon;
   final Color? backgroundgColor;
   final TextEditingController? controller;
@@ -23,7 +23,7 @@ class MyTextFormField extends StatelessWidget {
     this.enabledBorder,
     this.inputTextStyle,
     this.hintTextStyle,
-    this.isObscuredText,
+    this.isObscureText,
     this.suffixIcon,
     this.backgroundgColor,
     required this.validator,
@@ -75,7 +75,7 @@ class MyTextFormField extends StatelessWidget {
         suffixIcon: suffixIcon,
       ),
       style: TextStyles.font14DarkBlueReguler,
-      obscureText: isObscuredText ?? false, //email not pass if false.
+      obscureText: isObscureText ?? false, //email not pass if false.
       validator: (String? value) {
         return validator(value);
       },

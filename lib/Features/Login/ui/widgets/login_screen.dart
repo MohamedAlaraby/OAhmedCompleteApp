@@ -1,13 +1,11 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_complete_project/Features/Login/data/models/login_request_body.dart';
-import 'package:flutter_complete_project/Features/Login/logic/cubit/login_cubit.dart';
-import 'package:flutter_complete_project/Features/Login/ui/widgets/accept_terms_conditions_text.dart';
-import 'package:flutter_complete_project/Features/Login/ui/widgets/already_have_account_text.dart';
-import 'package:flutter_complete_project/Features/Login/ui/widgets/email_and_password.dart';
-import 'package:flutter_complete_project/Features/Login/ui/widgets/login_bloc_listener.dart';
+import 'package:flutter_complete_project/Features/login/ui/widgets/accept_terms_conditions_text.dart';
+import 'package:flutter_complete_project/Features/login/ui/widgets/don\'t_have_account_text.dart';
+import 'package:flutter_complete_project/Features/login/ui/widgets/email_and_password.dart';
+import 'package:flutter_complete_project/Features/login/ui/widgets/login_bloc_listener.dart';
+import 'package:flutter_complete_project/Features/login/logic/login_cubit/login_cubit.dart';
 import 'package:flutter_complete_project/core/helpers/spacing_helper.dart';
 import 'package:flutter_complete_project/core/theming/styles.dart';
 import 'package:flutter_complete_project/core/widgets/my_text_button.dart';
@@ -76,15 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future<void> validateThenLogin() async {
     if (context.read<LoginCubit>().formkey.currentState!.validate()) {
-      var email = context.read<LoginCubit>().emailController.text;
-      var password = context.read<LoginCubit>().passwordController.text;
-      log("email is $email pass is $password");
-      context.read<LoginCubit>().emitLoginStates(
-            LoginRequestBody(
-              email: email,
-              password: password,
-            ),
-          );
+      context.read<LoginCubit>().emitLoginStates();
     }
   }
 }
