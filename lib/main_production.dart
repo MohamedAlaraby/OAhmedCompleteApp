@@ -6,14 +6,10 @@ import 'package:flutter_complete_project/core/routing/app_router.dart';
 import 'package:flutter_complete_project/doc_app.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() async {
+void main() async { 
   setupGetIt();
-  //To fix the hidden text bug in screen util package.
+  //*To fix the hidden text bug in screen util package.
   await ScreenUtil.ensureScreenSize();
   Bloc.observer = MyBlocObserver();
-  runApp(
-    DocApp(
-      appRouter: AppRouter(),
-    ),
-  );
+  runApp(DocApp( appRouter: AppRouter()));
 }
