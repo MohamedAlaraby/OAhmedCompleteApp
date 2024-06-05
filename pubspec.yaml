@@ -1,7 +1,7 @@
 name: flutter_complete_project
 description: "A new Flutter project."
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.1+1
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
@@ -30,9 +30,10 @@ dependencies:
   intl: ^0.18.0
   easy_localization: ^3.0.0
   #splash
-  flutter_native_splash: ^2.3.11
+  flutter_native_splash: ^2.3.10
   flutter_svg: ^2.0.9
   flutter_screenutil: ^5.9.0
+  firebase_core: ^2.12.0
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
