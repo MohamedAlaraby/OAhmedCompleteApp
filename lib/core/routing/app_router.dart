@@ -22,6 +22,7 @@ class AppRouter {
             child: const LoginScreen(),
           ),
         );
+
       case Routes.signupScreen:
         return MaterialPageRoute(
           builder: (c) => BlocProvider<SignupCubit>(
@@ -29,10 +30,12 @@ class AppRouter {
             child: const SignupScreen(),
           ),
         );
+
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (c) => const HomeScreen(),
         );
+        
       default:
         return MaterialPageRoute(
           builder: (ctx) => getDefaultWidget(settings.name!),
