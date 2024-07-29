@@ -22,17 +22,17 @@ class GetStartedButton extends StatelessWidget {
           animationDuration: const Duration(
             seconds: 20,
           ),
-          backgroundColor: MaterialStateProperty.all(
+          backgroundColor: WidgetStateProperty.all(
             ColorsManager.mainBlue,
           ),
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          minimumSize: MaterialStateProperty.all(
+          minimumSize: WidgetStateProperty.all(
             const Size(
               double.infinity,
               50,
             ),
           ),
-          shape: MaterialStateProperty.all(
+          shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
                 10,

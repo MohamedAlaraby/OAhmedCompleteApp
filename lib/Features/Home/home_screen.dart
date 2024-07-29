@@ -15,7 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
           child: Column(
-            children: [Text("THIS IS HOME YA BASHA")],
+            children: [
+              HomeTopAppBar(),
+            ],
           ),
         ),
       ),
