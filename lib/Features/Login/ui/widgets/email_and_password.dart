@@ -53,6 +53,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       child: Column(
         children: [
           MyTextFormField(
+            
             hintText: "Email",
             validator: (value) {
               if (value == null ||

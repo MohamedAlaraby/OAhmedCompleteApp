@@ -9,8 +9,10 @@ part 'login_cubit.freezed.dart';
 class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
   LoginCubit(this._loginRepo) : super(const LoginState.initial());
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController =
+      TextEditingController(text: "saadmo@gmail.com");
+  TextEditingController passwordController =
+      TextEditingController(text: "Mo@12345");
   var formkey = GlobalKey<FormState>();
   //********* */
   //********* */
