@@ -45,9 +45,13 @@ class DoctorsBlueContainers extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 30.w,
+                            vertical: 0.h,
+                          ),
                           backgroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(48),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                         child: Text(
