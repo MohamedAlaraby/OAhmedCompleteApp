@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_complete_project/Features/home/home_screen.dart';
+import 'package:flutter_complete_project/Features/home/logic/home_cubit.dart';
 import 'package:flutter_complete_project/Features/login/ui/widgets/login_screen.dart';
 import 'package:flutter_complete_project/Features/onboarding/onboarding_screen.dart';
 import 'package:flutter_complete_project/Features/signup/logic/signup_cubit/signup_cubit.dart';
@@ -11,7 +12,7 @@ import 'package:flutter_complete_project/core/routing/routes.dart';
 import '../../Features/login/logic/login_cubit/login_cubit.dart';
 
 class AppRouter {
-  Route generateRoute(RouteSettings settings) {
+  Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(builder: (c) => const OnBoardingScreen());
@@ -33,13 +34,13 @@ class AppRouter {
 
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (c) => const HomeScreen(),
+          builder: (c) => BlocProvider(
+              create: (context) => HomeCubit(getIt())..getSpecializations(),
+              child: const HomeScreen()),
         );
-        
+
       default:
-        return MaterialPageRoute(
-          builder: (ctx) => getDefaultWidget(settings.name!),
-        );
+        return null; //By returning null we will exit fro the app when press on back button
     }
   }
 

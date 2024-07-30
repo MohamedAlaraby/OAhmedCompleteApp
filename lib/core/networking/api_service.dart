@@ -7,16 +7,16 @@ import 'package:flutter_complete_project/core/networking/api_constants.dart';
 import 'package:retrofit/retrofit.dart';
 part 'api_service.g.dart';
 
-@RestApi(baseUrl: ApiConstants.apiBaseUrl)
+@RestApi(baseUrl: AppApiConstants.apiBaseUrl)
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
   //1-post method
-  @POST(ApiConstants.login)
+  @POST(AppApiConstants.login)
   Future<LoginResponse> login(
     @Body() LoginRequestBody body,
   );
   //2-post method
-  @POST(ApiConstants.register)
+  @POST(AppApiConstants.register)
   Future<SignupResponse> signup(
     @Body() SignupRequestBody body,
   );
