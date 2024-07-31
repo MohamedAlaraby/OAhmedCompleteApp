@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_complete_project/Features/home/data/models/specializations_response_model.dart';
+import 'package:flutter_complete_project/Features/home/logic/home_cubit.dart';
+import 'package:flutter_complete_project/Features/home/logic/home_state.dart';
+import 'package:flutter_complete_project/Features/home/ui/widgets/doctors_listview.dart';
+import 'package:flutter_complete_project/core/networking/api_error_handler.dart';
+
+class DoctorsBlocBuilder extends StatelessWidget {
+  const DoctorsBlocBuilder({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<HomeCubit, HomeState>(
+      buildWhen: (previous, current) =>
+          current is DoctorsSuccess || current is DoctorsError,
+      builder: (context, state) {
+        return state.maybeWhen(
+          doctorsSuccess: (List<Doctors?>? doctors) {
+            return setupSuccess(doctors);
+          },
+          doctorsError: (ErrorHandler errorHandler) {
+            return setupError(errorHandler.apiErrorModel.message ?? "error");
+          },
+          orElse: () => const SizedBox.shrink(),
+        );
+      },
+    );
+  }
+
+  Widget setupSuccess(List<Doctors?>? doctors) {
+    return DoctorsListview(doctors: doctors);
+  }
+
+  Widget setupError(String error) {
+    return Center(
+      child: Text(error),
+    );
+  }
+}
