@@ -23,11 +23,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           child: Column(
             children: [
-              const HomeTopBar(),
-              const DoctorsBlueContainers(),
-              verticalSpace(16),
-              const DoctorSpecialityRow(),
-              const SpecialitySectionBlocBulder(),
+                const HomeTopBar(),
+                const DoctorsBlueContainers(),
+                verticalSpace(16),
+                const DoctorSpecialityRow(),
+                const SpecialitySectionBlocBulder(),
             ],
           ),
         ),

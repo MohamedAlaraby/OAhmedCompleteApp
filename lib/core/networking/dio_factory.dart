@@ -1,4 +1,8 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
+import 'package:flutter_complete_project/core/helpers/constants.dart';
+import 'package:flutter_complete_project/core/helpers/shared_prefs_helper.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
@@ -20,11 +24,21 @@ class DioFactory {
     }
   }
 
-  static void addDioHeaders() {
+  static Future<void> addDioHeaders() async {
+    final token =
+        await SharedPrefsHelper.getSecuredString(SharedPrefKeys.userToken);
+    log("token when adding headers are $token");
     dio?.options.headers = {
       "Accept": "application/json",
-      "Authorization":
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzIyMzc5NDgwLCJleHAiOjE3MjI0NjU4ODAsIm5iZiI6MTcyMjM3OTQ4MCwianRpIjoiOXk0dTNwbFk1U2c5NjA4TyIsInN1YiI6IjEyMjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.U5C8UUQWFA4nT1-h9DlvoNTKhPkfh4Fe0WoGzNFoWMY",
+      "Authorization": "Bearer $token",
+    };
+  }
+
+  static Future<void> setTokenAfterLogin(String token) async {
+    log("setTokenAfterLogin $token");
+    dio?.options.headers = {
+      "Accept": "application/json",
+      "Authorization": "Bearer $token",
     };
   }
 

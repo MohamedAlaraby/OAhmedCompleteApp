@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_complete_project/Features/home/home_screen.dart';
+import 'package:flutter_complete_project/Features/home/ui/home_screen.dart';
 import 'package:flutter_complete_project/Features/home/logic/home_cubit.dart';
 import 'package:flutter_complete_project/Features/login/ui/widgets/login_screen.dart';
 import 'package:flutter_complete_project/Features/onboarding/onboarding_screen.dart';
