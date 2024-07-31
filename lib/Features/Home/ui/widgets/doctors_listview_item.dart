@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_complete_project/Features/home/data/models/specializations_response_model.dart';
 import 'package:flutter_complete_project/core/helpers/spacing_helper.dart';
 import 'package:flutter_complete_project/core/theming/styles.dart';
@@ -16,15 +16,15 @@ class DoctorsListviewItem extends StatelessWidget {
       child: Row(
         children: [
           ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: CachedNetworkImage(
-                imageUrl:
-                    "https://as1.ftcdn.net/v2/jpg/02/95/51/80/1000_F_295518052_aO5d9CqRhPnjlNDTRDjKLZHNftqfsxzI.jpg",
-                width: 110.w,
-                height: 100.h,
-                fit: BoxFit.cover,
-              ),
-              ),
+            borderRadius: BorderRadius.circular(16),
+            child: CachedNetworkImage(
+              imageUrl:
+                  "https://as1.ftcdn.net/v2/jpg/02/95/51/80/1000_F_295518052_aO5d9CqRhPnjlNDTRDjKLZHNftqfsxzI.jpg",
+              width: 110.w,
+              height: 100.h,
+              fit: BoxFit.cover,
+            ),
+          ),
           horizontalSpace(16),
           Expanded(
             child: Column(
