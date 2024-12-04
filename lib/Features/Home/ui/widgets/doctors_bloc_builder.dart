@@ -6,6 +6,8 @@ import 'package:flutter_complete_project/Features/home/logic/home_state.dart';
 import 'package:flutter_complete_project/Features/home/ui/widgets/doctors_listview.dart';
 import 'package:flutter_complete_project/core/networking/api_error_handler.dart';
 
+import '../../../../core/networking/api_error_model.dart';
+
 class DoctorsBlocBuilder extends StatelessWidget {
   const DoctorsBlocBuilder({super.key});
 
@@ -19,8 +21,8 @@ class DoctorsBlocBuilder extends StatelessWidget {
           doctorsSuccess: (List<Doctors?>? doctors) {
             return setupSuccess(doctors);
           },
-          doctorsError: (ErrorHandler errorHandler) {
-            return setupError(errorHandler.apiErrorModel.message ?? "error");
+          doctorsError: (ApiErrorModel apiErrorModel) {
+            return setupError(apiErrorModel.message ?? "error");
           },
           orElse: () => const SizedBox.shrink(),
         );

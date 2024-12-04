@@ -4,6 +4,7 @@ import 'package:flutter_complete_project/Features/login/data/models/login_reques
 import 'package:flutter_complete_project/Features/login/data/repos/login_repo.dart';
 import 'package:flutter_complete_project/core/helpers/constants.dart';
 import 'package:flutter_complete_project/core/helpers/shared_prefs_helper.dart';
+import 'package:flutter_complete_project/core/networking/api_error_model.dart';
 import 'package:flutter_complete_project/core/networking/dio_factory.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'login_state.dart';
@@ -33,7 +34,7 @@ class LoginCubit extends Cubit<LoginState> {
       await saveUserToken(loginResponse.userData?.token ?? "");
       emit(LoginState.success(response));
     }, failure: (error) {
-      emit(LoginState.error(error: error.apiErrorModel.message ?? " "));
+      emit(LoginState.error(error));
     });
   }
 

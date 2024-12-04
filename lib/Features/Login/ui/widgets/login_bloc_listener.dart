@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_complete_project/Features/login/logic/login_cubit/login_cubit.dart';
 import 'package:flutter_complete_project/core/helpers/extensions.dart';
+import 'package:flutter_complete_project/core/networking/api_error_model.dart';
 import 'package:flutter_complete_project/core/routing/routes.dart';
 import 'package:flutter_complete_project/core/theming/colors.dart';
 import 'package:flutter_complete_project/core/theming/styles.dart';
@@ -30,13 +31,14 @@ class LoginBlocListener extends StatelessWidget {
             context.pushNamed(Routes.homeScreen);
           },
           error: (error) {
-            setupErrorState(context, error);
+            setupErrorState(context, error.getAllErrorMessages());
           },
         );
       },
       child: const SizedBox.shrink(),
     );
   }
+
   void setupErrorState(BuildContext context, String error) {
     context.pop();
     showDialog(

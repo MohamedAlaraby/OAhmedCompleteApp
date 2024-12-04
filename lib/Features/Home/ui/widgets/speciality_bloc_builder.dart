@@ -8,6 +8,7 @@ import 'package:flutter_complete_project/Features/home/ui/widgets/speciality_lis
 import 'package:flutter_complete_project/Features/home/ui/widgets/speciality_shimmer_loading.dart';
 import 'package:flutter_complete_project/core/helpers/spacing_helper.dart';
 import 'package:flutter_complete_project/core/networking/api_error_handler.dart';
+import 'package:flutter_complete_project/core/networking/api_error_model.dart';
 
 class SpecialityBlocBulder extends StatelessWidget {
   const SpecialityBlocBulder({
@@ -31,7 +32,7 @@ class SpecialityBlocBulder extends StatelessWidget {
                 specializations;
             return setupSuccess(specializationsDataList);
           },
-          specializationsError: (ErrorHandler errorHandler) => setupError(),
+          specializationsError: (ApiErrorModel errorHandler) => setupError(),
           orElse: () => setupError(),
         );
       },

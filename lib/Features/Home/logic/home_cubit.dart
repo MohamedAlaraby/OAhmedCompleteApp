@@ -12,17 +12,17 @@ class HomeCubit extends Cubit<HomeState> {
   List<SpecializationsData?>? specializationsList = [];
 
   Future<void> getSpecializations() async {
-    emit(const HomeState.specializationsLoading());
-    final response = await _homeRepo.getSpecializations();
+        emit(const HomeState.specializationsLoading());
+        final response = await _homeRepo.getSpecializations();
 
-    response.when(success: (data) {
-      specializationsList = data.specializationsDataList;
-      //getting the first specializaion doctor an an inital list.
-      getDoctorsList(specializationId: specializationsList!.first!.id!);
-      emit(HomeState.specializationsSuccess(specializationsList));
-    }, failure: (errorHandler) {
-      emit(HomeState.specializationsError(errorHandler));
-    });
+        response.when(success: (data) {
+          specializationsList = data.specializationsDataList;
+          //getting the first specializaion doctor an an inital list.
+          getDoctorsList(specializationId: specializationsList!.first!.id!);
+          emit(HomeState.specializationsSuccess(specializationsList));
+        }, failure: (apiErrorModel) {
+          emit(HomeState.specializationsError(apiErrorModel));
+        });
   }
 
   ///returns list of doctors based on the specidied index
@@ -40,7 +40,7 @@ class HomeCubit extends Cubit<HomeState> {
     if (!doctorsList.isNullOrEmpty()) {
       emit(HomeState.doctorsSuccess(doctorsList));
     } else {
-      emit(HomeState.doctorsError(ErrorHandler.handle("No doctors found")));
+      emit(HomeState.doctorsError(ApiErrorHandler.handle("No doctors found")));
     }
   }
 }

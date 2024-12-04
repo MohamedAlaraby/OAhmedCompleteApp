@@ -23,9 +23,9 @@ mixin _$HomeState {
     required TResult Function(
             List<SpecializationsData?>? specializationsDataList)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel errorHandler) specializationsError,
     required TResult Function(List<Doctors?>? doctorsList) doctorsSuccess,
-    required TResult Function(ErrorHandler errorHandler) doctorsError,
+    required TResult Function(ApiErrorModel errorHandler) doctorsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,9 +34,9 @@ mixin _$HomeState {
     TResult? Function()? specializationsLoading,
     TResult? Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel errorHandler)? specializationsError,
     TResult? Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? doctorsError,
+    TResult? Function(ApiErrorModel errorHandler)? doctorsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,9 +45,9 @@ mixin _$HomeState {
     TResult Function()? specializationsLoading,
     TResult Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel errorHandler)? specializationsError,
     TResult Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult Function(ErrorHandler errorHandler)? doctorsError,
+    TResult Function(ApiErrorModel errorHandler)? doctorsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,9 +146,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(
             List<SpecializationsData?>? specializationsDataList)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel errorHandler) specializationsError,
     required TResult Function(List<Doctors?>? doctorsList) doctorsSuccess,
-    required TResult Function(ErrorHandler errorHandler) doctorsError,
+    required TResult Function(ApiErrorModel errorHandler) doctorsError,
   }) {
     return initial();
   }
@@ -160,9 +160,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? specializationsLoading,
     TResult? Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel errorHandler)? specializationsError,
     TResult? Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? doctorsError,
+    TResult? Function(ApiErrorModel errorHandler)? doctorsError,
   }) {
     return initial?.call();
   }
@@ -174,9 +174,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? specializationsLoading,
     TResult Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel errorHandler)? specializationsError,
     TResult Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult Function(ErrorHandler errorHandler)? doctorsError,
+    TResult Function(ApiErrorModel errorHandler)? doctorsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -281,9 +281,9 @@ class _$SpecializationsLoadingImpl implements SpecializationsLoading {
     required TResult Function(
             List<SpecializationsData?>? specializationsDataList)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel errorHandler) specializationsError,
     required TResult Function(List<Doctors?>? doctorsList) doctorsSuccess,
-    required TResult Function(ErrorHandler errorHandler) doctorsError,
+    required TResult Function(ApiErrorModel errorHandler) doctorsError,
   }) {
     return specializationsLoading();
   }
@@ -295,9 +295,9 @@ class _$SpecializationsLoadingImpl implements SpecializationsLoading {
     TResult? Function()? specializationsLoading,
     TResult? Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel errorHandler)? specializationsError,
     TResult? Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? doctorsError,
+    TResult? Function(ApiErrorModel errorHandler)? doctorsError,
   }) {
     return specializationsLoading?.call();
   }
@@ -309,9 +309,9 @@ class _$SpecializationsLoadingImpl implements SpecializationsLoading {
     TResult Function()? specializationsLoading,
     TResult Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel errorHandler)? specializationsError,
     TResult Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult Function(ErrorHandler errorHandler)? doctorsError,
+    TResult Function(ApiErrorModel errorHandler)? doctorsError,
     required TResult orElse(),
   }) {
     if (specializationsLoading != null) {
@@ -454,9 +454,9 @@ class _$SpecializationsSuccessImpl implements SpecializationsSuccess {
     required TResult Function(
             List<SpecializationsData?>? specializationsDataList)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel errorHandler) specializationsError,
     required TResult Function(List<Doctors?>? doctorsList) doctorsSuccess,
-    required TResult Function(ErrorHandler errorHandler) doctorsError,
+    required TResult Function(ApiErrorModel errorHandler) doctorsError,
   }) {
     return specializationsSuccess(specializationsDataList);
   }
@@ -468,9 +468,9 @@ class _$SpecializationsSuccessImpl implements SpecializationsSuccess {
     TResult? Function()? specializationsLoading,
     TResult? Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel errorHandler)? specializationsError,
     TResult? Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? doctorsError,
+    TResult? Function(ApiErrorModel errorHandler)? doctorsError,
   }) {
     return specializationsSuccess?.call(specializationsDataList);
   }
@@ -482,9 +482,9 @@ class _$SpecializationsSuccessImpl implements SpecializationsSuccess {
     TResult Function()? specializationsLoading,
     TResult Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel errorHandler)? specializationsError,
     TResult Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult Function(ErrorHandler errorHandler)? doctorsError,
+    TResult Function(ApiErrorModel errorHandler)? doctorsError,
     required TResult orElse(),
   }) {
     if (specializationsSuccess != null) {
@@ -556,7 +556,7 @@ abstract class _$$SpecializationsErrorImplCopyWith<$Res> {
           $Res Function(_$SpecializationsErrorImpl) then) =
       __$$SpecializationsErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ErrorHandler errorHandler});
+  $Res call({ApiErrorModel errorHandler});
 }
 
 /// @nodoc
@@ -576,7 +576,7 @@ class __$$SpecializationsErrorImplCopyWithImpl<$Res>
       null == errorHandler
           ? _value.errorHandler
           : errorHandler // ignore: cast_nullable_to_non_nullable
-              as ErrorHandler,
+              as ApiErrorModel,
     ));
   }
 }
@@ -587,7 +587,7 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
   const _$SpecializationsErrorImpl(this.errorHandler);
 
   @override
-  final ErrorHandler errorHandler;
+  final ApiErrorModel errorHandler;
 
   @override
   String toString() {
@@ -622,9 +622,9 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
     required TResult Function(
             List<SpecializationsData?>? specializationsDataList)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel errorHandler) specializationsError,
     required TResult Function(List<Doctors?>? doctorsList) doctorsSuccess,
-    required TResult Function(ErrorHandler errorHandler) doctorsError,
+    required TResult Function(ApiErrorModel errorHandler) doctorsError,
   }) {
     return specializationsError(errorHandler);
   }
@@ -636,9 +636,9 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
     TResult? Function()? specializationsLoading,
     TResult? Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel errorHandler)? specializationsError,
     TResult? Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? doctorsError,
+    TResult? Function(ApiErrorModel errorHandler)? doctorsError,
   }) {
     return specializationsError?.call(errorHandler);
   }
@@ -650,9 +650,9 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
     TResult Function()? specializationsLoading,
     TResult Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel errorHandler)? specializationsError,
     TResult Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult Function(ErrorHandler errorHandler)? doctorsError,
+    TResult Function(ApiErrorModel errorHandler)? doctorsError,
     required TResult orElse(),
   }) {
     if (specializationsError != null) {
@@ -708,10 +708,10 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
 }
 
 abstract class SpecializationsError implements HomeState {
-  const factory SpecializationsError(final ErrorHandler errorHandler) =
+  const factory SpecializationsError(final ApiErrorModel errorHandler) =
       _$SpecializationsErrorImpl;
 
-  ErrorHandler get errorHandler;
+  ApiErrorModel get errorHandler;
   @JsonKey(ignore: true)
   _$$SpecializationsErrorImplCopyWith<_$SpecializationsErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -797,9 +797,9 @@ class _$DoctorsSuccessImpl implements DoctorsSuccess {
     required TResult Function(
             List<SpecializationsData?>? specializationsDataList)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel errorHandler) specializationsError,
     required TResult Function(List<Doctors?>? doctorsList) doctorsSuccess,
-    required TResult Function(ErrorHandler errorHandler) doctorsError,
+    required TResult Function(ApiErrorModel errorHandler) doctorsError,
   }) {
     return doctorsSuccess(doctorsList);
   }
@@ -811,9 +811,9 @@ class _$DoctorsSuccessImpl implements DoctorsSuccess {
     TResult? Function()? specializationsLoading,
     TResult? Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel errorHandler)? specializationsError,
     TResult? Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? doctorsError,
+    TResult? Function(ApiErrorModel errorHandler)? doctorsError,
   }) {
     return doctorsSuccess?.call(doctorsList);
   }
@@ -825,9 +825,9 @@ class _$DoctorsSuccessImpl implements DoctorsSuccess {
     TResult Function()? specializationsLoading,
     TResult Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel errorHandler)? specializationsError,
     TResult Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult Function(ErrorHandler errorHandler)? doctorsError,
+    TResult Function(ApiErrorModel errorHandler)? doctorsError,
     required TResult orElse(),
   }) {
     if (doctorsSuccess != null) {
@@ -898,7 +898,7 @@ abstract class _$$DoctorsErrorImplCopyWith<$Res> {
           _$DoctorsErrorImpl value, $Res Function(_$DoctorsErrorImpl) then) =
       __$$DoctorsErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ErrorHandler errorHandler});
+  $Res call({ApiErrorModel errorHandler});
 }
 
 /// @nodoc
@@ -918,7 +918,7 @@ class __$$DoctorsErrorImplCopyWithImpl<$Res>
       null == errorHandler
           ? _value.errorHandler
           : errorHandler // ignore: cast_nullable_to_non_nullable
-              as ErrorHandler,
+              as ApiErrorModel,
     ));
   }
 }
@@ -929,7 +929,7 @@ class _$DoctorsErrorImpl implements DoctorsError {
   const _$DoctorsErrorImpl(this.errorHandler);
 
   @override
-  final ErrorHandler errorHandler;
+  final ApiErrorModel errorHandler;
 
   @override
   String toString() {
@@ -962,9 +962,9 @@ class _$DoctorsErrorImpl implements DoctorsError {
     required TResult Function(
             List<SpecializationsData?>? specializationsDataList)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel errorHandler) specializationsError,
     required TResult Function(List<Doctors?>? doctorsList) doctorsSuccess,
-    required TResult Function(ErrorHandler errorHandler) doctorsError,
+    required TResult Function(ApiErrorModel errorHandler) doctorsError,
   }) {
     return doctorsError(errorHandler);
   }
@@ -976,9 +976,9 @@ class _$DoctorsErrorImpl implements DoctorsError {
     TResult? Function()? specializationsLoading,
     TResult? Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel errorHandler)? specializationsError,
     TResult? Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? doctorsError,
+    TResult? Function(ApiErrorModel errorHandler)? doctorsError,
   }) {
     return doctorsError?.call(errorHandler);
   }
@@ -990,9 +990,9 @@ class _$DoctorsErrorImpl implements DoctorsError {
     TResult Function()? specializationsLoading,
     TResult Function(List<SpecializationsData?>? specializationsDataList)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel errorHandler)? specializationsError,
     TResult Function(List<Doctors?>? doctorsList)? doctorsSuccess,
-    TResult Function(ErrorHandler errorHandler)? doctorsError,
+    TResult Function(ApiErrorModel errorHandler)? doctorsError,
     required TResult orElse(),
   }) {
     if (doctorsError != null) {
@@ -1048,10 +1048,10 @@ class _$DoctorsErrorImpl implements DoctorsError {
 }
 
 abstract class DoctorsError implements HomeState {
-  const factory DoctorsError(final ErrorHandler errorHandler) =
+  const factory DoctorsError(final ApiErrorModel errorHandler) =
       _$DoctorsErrorImpl;
 
-  ErrorHandler get errorHandler;
+  ApiErrorModel get errorHandler;
   @JsonKey(ignore: true)
   _$$DoctorsErrorImplCopyWith<_$DoctorsErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
